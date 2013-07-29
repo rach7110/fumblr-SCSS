@@ -1,13 +1,22 @@
-<p id="notice"><%= notice %></p>
+<div class="fumbl">
+  <p id="notice"><%= notice %></p>
 
-<h1>
-  <%= @fumbl.title %>
-</h1>
+  <h1>
+    <%= @fumbl.title %>
+  </h1>
 
-<div class='body'>
-  <%= @fumbl.body %>
+  <div class='body'>
+    <%= @fumbl.body %>
+  </div>
+  <div class="body-clone">
+    Let's test out Selector Inheritance!
+    </br>
+    Let's test out Selector Inheritance!
+    </br>
+    Let's test out Selector Inheritance!
+  </div>
+
+
+  <%= link_to 'Edit', edit_fumbl_path(@fumbl) %> |
+  <%= link_to 'Back', fumbls_path %>
 </div>
-
-
-<%= link_to 'Edit', edit_fumbl_path(@fumbl) %> |
-<%= link_to 'Back', fumbls_path %>

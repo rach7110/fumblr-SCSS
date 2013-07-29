@@ -1,3 +1,4 @@
-$(function() {
-  $('.body').html(markdown.toHTML($('.body').html()));
-});
+// $(function() {
+//   $('.body').html(markdown.toHTML($('.body').html()));
+// });
+

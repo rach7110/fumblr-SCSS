@@ -2,4 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 { color: red; }
+
+/*$color01: rgb(0,0,255);*/
+$color01: green;
+
+/*The SCSS version of functions are known as mixins*/
+@mixin left($dist) {
+  float: left;
+  margin-left: $dist * 2;
+}
+/*SCSS is so mind-bendingly awesome that you can even perform mathematical operations on arguments*/
+
+.fumbl {
+  h1 { color: $color01; }
+
+  .body {
+    @include left(10px);
+  	background-image: url('background.png');
+    /*SCSS also comes with a number of functions that we can call in our stylesheets. */
+  	border: 4px solid lighten($color01, 50%);
+  	color: white;
+    font: {
+      size: 20px;
+      style: italic;
+    }
+  }
+  /*SCSS also allows "selector inheritance"*/
+
+  .body-clone {
+    @extend .body;
+  }
+  /*call any selector after @extend to inherit all of its styling.*/
+}
